@@ -30,12 +30,12 @@ export default async function Home() {
   console.log(total);
 
   return (
-    <main className={classes.main}>
-      <div className={classes["main-search"]}>
+    <main className={classes["main-container"]}>
+      <div className={classes["main-search-container"]}>
         <Search placeholder="Search a character..." />
         <SearchCounter results={2} />
       </div>
-      <div className={classes["main-content"]}>
+      <div className={classes["main-content-container"]}>
         <CharacterList characters={characters} />
       </div>
     </main>
