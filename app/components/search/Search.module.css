@@ -1,0 +1,27 @@
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--size-8);
+  position: relative;
+}
+
+.search {
+  padding-bottom: var(--size-8);
+  font-size: var(--size-16);
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 1px solid var(--dark-color);
+  width: 100%;
+  padding-left: 28px;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  top: 2px;
+}

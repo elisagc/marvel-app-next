@@ -1,0 +1,5 @@
+.favorites-container {
+  display: flex;
+  align-items: center;
+  gap: var(--size-8);
+}
