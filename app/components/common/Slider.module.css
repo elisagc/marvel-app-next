@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  gap: 16px;
+  overflow-x: scroll;
+  padding-bottom: var(--size-24);
+}
+
+.container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 0px;
+}
+
+.container::-webkit-scrollbar-track {
+  background-color: var(--light-grey-color);
+}

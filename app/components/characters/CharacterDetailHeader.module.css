@@ -1,0 +1,26 @@
+.container {
+  height: 320px;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  display: flex;
+  gap: var(--size-48);
+  flex: 1;
+}
+.container-detail-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--size-24);
+  width: 100%;
+}
+
+.container-detail-data div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-detail-data h1 {
+  font-size: var(--size-40);
+  font-weight: 700;
+}
