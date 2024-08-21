@@ -8,10 +8,6 @@
   }
 }
 
-.main-search-container {
-  color: var(--dark-color);
-}
-
 .error-container {
   display: flex;
   flex-direction: column;
@@ -19,7 +15,6 @@
   align-items: center;
   height: 100vh;
   gap: var(--size-16);
-  color: var(--dark-color);
 }
 
 .error-container button {
