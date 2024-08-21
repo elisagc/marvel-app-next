@@ -1,3 +1,4 @@
+export { CharacterDetailHeader } from "./characters/CharacterDetailHeader";
 export { CharacterList } from "./characters/CharacterList";
 export { Title } from "./common/Title";
 export { FavoriteButton } from "./favorites/FavoriteButton";
