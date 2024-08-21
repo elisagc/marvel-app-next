@@ -1,4 +1,5 @@
 "use client";
+
 import { Character } from "@/interfaces/Characters";
 import { FavoritesContext } from "@/store/favoritesContext";
 import Image from "next/image";
@@ -7,9 +8,10 @@ import classes from "./FavoriteButton.module.css";
 
 interface FavoriteButtonProps {
   character: Character;
+  size?: "small" | "medium";
 }
 
-export const FavoriteButton = ({ character }: FavoriteButtonProps) => {
+export const FavoriteButton = ({ character, size = "small" }: FavoriteButtonProps) => {
   const { id } = character;
   const { toggleFavorite, favorites } = useContext(FavoritesContext);
 
@@ -20,9 +22,19 @@ export const FavoriteButton = ({ character }: FavoriteButtonProps) => {
 
   const isFavorite = !!favorites[id];
 
+  const buttonSize = {
+    small: 12,
+    medium: 24,
+  };
+
   return (
     <button onClick={handleFavorite(character)} className={classes.button}>
-      <Image src={isFavorite ? "/heart.svg" : "/heart-empty.svg"} alt="favorite" width={12} height={12} />
+      <Image
+        src={isFavorite ? "/heart.svg" : "/heart-empty.svg"}
+        alt="favorite"
+        width={buttonSize[size]}
+        height={buttonSize[size]}
+      />
     </button>
   );
 };
