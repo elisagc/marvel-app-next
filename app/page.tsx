@@ -1,5 +1,5 @@
+import { CharacterList, Search, SearchCounter } from "@/components";
 import { Character, CharacterResponse, CharactersApiResponse } from "@/interfaces/Characters";
-import { CharacterList, Search, SearchCounter } from "./components";
 
 import classes from "./page.module.css";
 
@@ -14,6 +14,7 @@ const getCharacter = async ({ limit = 0, offset = 0 }): Promise<CharacterRespons
       id: character.id,
       name: character.name,
       image: `${character.thumbnail.path}.${character.thumbnail.extension}`,
+      description: character.description,
     }));
 
     return {
@@ -26,14 +27,13 @@ const getCharacter = async ({ limit = 0, offset = 0 }): Promise<CharacterRespons
 };
 
 export default async function Home() {
-  const { characters, total } = await getCharacter({ limit: 50, offset: 0 });
-  console.log(total);
+  const { characters, total } = await getCharacter({ limit: 5, offset: 0 });
 
   return (
     <main className={classes["main-container"]}>
       <div className={classes["main-search-container"]}>
         <Search placeholder="Search a character..." />
-        <SearchCounter results={2} />
+        <SearchCounter results={total} />
       </div>
       <div className={classes["main-content-container"]}>
         <CharacterList characters={characters} />

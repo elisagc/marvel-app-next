@@ -10,7 +10,7 @@ interface CharacterCardProps {
 
 export const CharacterCard = ({ character }: CharacterCardProps) => {
   return (
-    <Link href={`/characters/${character.id}`} passHref>
+    <Link href={`/character/${character.id}`}>
       <div key={character.id} className={classes["character-card"]}>
         <div className={classes["character-card-image-container"]}>
           <Image
@@ -22,7 +22,7 @@ export const CharacterCard = ({ character }: CharacterCardProps) => {
         </div>
         <div className={classes["character-card-footer"]}>
           <span>{character.name}</span>
-          <FavoriteButton id={character.id} />
+          <FavoriteButton character={character} />
         </div>
       </div>
     </Link>
