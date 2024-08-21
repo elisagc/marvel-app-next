@@ -1,0 +1,20 @@
+.progress {
+  height: 6px;
+  width: 100%;
+}
+
+.progress-value {
+  animation: load 5s infinite ease-in-out;
+  background: var(--primary-color);
+  height: 6px;
+  width: 0;
+}
+
+@keyframes load {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

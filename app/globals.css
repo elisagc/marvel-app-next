@@ -6,6 +6,7 @@
   --primary-color: #ec1d24;
   --light-color: #ffffff;
   --dark-color: #000000;
+  --light-grey-color: #d9d9d9;
 
   --size-8: 8px;
   --size-12: 12px;
@@ -13,6 +14,7 @@
   --size-16: 16px;
   --size-24: 24px;
   --size-32: 32px;
+  --size-36: 36px;
   --size-40: 40px;
   --size-48: 48px;
 
@@ -29,10 +31,6 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
-  color: var(--light-color);
 }
 
 a {
