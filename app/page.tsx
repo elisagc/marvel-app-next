@@ -17,7 +17,7 @@ export default function Home({ searchParams }: SearchParams) {
   return (
     <main className={classes["main-container"]}>
       <Search placeholder="Search a character..." />
-      <Suspense key={search ?? Math.random()} fallback={<Loader />}>
+      <Suspense key={search} fallback={<Loader />}>
         <CharacterList query={search} />
       </Suspense>
     </main>

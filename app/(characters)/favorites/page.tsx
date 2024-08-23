@@ -1,6 +1,6 @@
 import { FavoriteList, Search } from "@/components";
 
-import classes from "../page.module.css";
+import classes from "@/page.module.css";
 export const metadata = {
   title: "Favorites",
   description: "Favorites page",
