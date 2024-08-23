@@ -25,5 +25,4 @@
   border: none;
   text-transform: uppercase;
   font-size: var(--size-16);
-  clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 76%, 93% 100%, 20% 100%, 0 100%, 0% 20%);
 }
