@@ -12,7 +12,6 @@ export const getCharacters = async ({
   const url = `https://gateway.marvel.com/v1/public/characters?limit=${limit}&offset=${offset}`;
   const searchQuery = search ? `&nameStartsWith=${search}` : "";
   const urlApiKeyParams = `&ts=${process.env.TIME_STAMP}&apikey=${process.env.MARVEL_API_KEY}&hash=${process.env.HASH_MD5}`;
-  console.log(`${url}${urlApiKeyParams}`);
   const { data }: CharactersApiResponse = await fetch(`${url}${urlApiKeyParams}${searchQuery}`).then((res) =>
     res.json()
   );
@@ -39,7 +38,6 @@ export const getCharacterDetail = async ({ id }: { id: string }): Promise<Charac
   const urlApiKeyParams = `?ts=${process.env.TIME_STAMP}&apikey=${process.env.MARVEL_API_KEY}&hash=${process.env.HASH_MD5}`;
 
   const { data }: CharactersApiResponse = await fetch(`${url}${urlApiKeyParams}`).then((res) => res.json());
-  console.log(`${url}${urlApiKeyParams}`);
   if (data?.results) {
     const character: Character = {
       id: data.results[0].id,

@@ -5,7 +5,6 @@ export const getCharacterComics = async (id: string): Promise<Comic[]> => {
 
   const urlApiKeyParams = `ts=${process.env.NEXT_PUBLIC_TIME_STAMP}&apikey=${process.env.NEXT_PUBLIC_MARVEL_API_KEY}&hash=${process.env.NEXT_PUBLIC_HASH_MD5}`;
 
-  console.log(`${url}${urlApiKeyParams}`);
   const { data }: ComicApiResponse = await fetch(`${url}${urlApiKeyParams}`).then((res) => res.json());
 
   return data.results.map((comic) => ({

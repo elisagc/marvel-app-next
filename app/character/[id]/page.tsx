@@ -18,7 +18,6 @@ export default async function CharacterDetailPage({ params }: Props) {
   const hasComics = !!characterComics.length;
   const title = hasComics ? "Comics" : "No comics found";
 
-  console.log(characterComics, !!characterComics, !!characterComics.length);
   return (
     <>
       <CharacterDetailHeader character={character} />
