@@ -1,0 +1,13 @@
+.main-container {
+  padding: var(--size-48);
+}
+
+@media (width <= 425px) {
+  .main-container {
+    padding: var(--size-16);
+  }
+}
+
+.main-container > :first-child {
+  padding-bottom: var(--size-24);
+}
