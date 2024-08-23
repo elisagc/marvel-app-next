@@ -6,7 +6,7 @@ import styles from "./Header.module.css";
 export const Header = () => {
   return (
     <div className={styles["header-container"]}>
-      <Link href={"/"}>
+      <Link href={"/"} replace>
         <Image src="/logo.svg" alt="logo" width={122} height={44} priority />
       </Link>
 

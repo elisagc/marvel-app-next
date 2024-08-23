@@ -17,3 +17,12 @@
 .container::-webkit-scrollbar-track {
   background-color: var(--light-grey-color);
 }
+
+@media (width <= 960px) {
+  .container {
+    padding: 0 var(--size-24);
+  }
+  .container::-webkit-scrollbar {
+    height: 0px;
+  }
+}
