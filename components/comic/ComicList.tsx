@@ -1,9 +1,7 @@
 "use client";
 
-import { Comic } from "@/interfaces/Comics";
-import { Slider } from "../common/Slider";
-import { Title } from "../common/Title";
-import { ComicCard } from "./ComicCard";
+import { ComicCard, Slider, Title } from "@/components";
+import { Comic } from "@/types/Comics";
 import classes from "./ComicList.module.css";
 
 interface ComicListProps {

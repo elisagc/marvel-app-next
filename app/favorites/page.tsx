@@ -1,5 +1,5 @@
 import { FavoriteList, Search, Title } from "@/components";
-import classes from "./page.module.css";
+import classes from "@/styles/page.module.css";
 
 export const metadata = {
   title: "Favorites",
@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function FavoritePage() {
   return (
-    <main className={classes["main-container"]}>
+    <main className={classes["favorites-container"]}>
       <Title title="Favorites" />
       <Search placeholder="Search a character..." />
       <FavoriteList />

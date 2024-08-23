@@ -1,7 +1,7 @@
 "use client";
 
-import { Character } from "@/interfaces/Characters";
 import { FavoritesContext } from "@/store/favoritesContext";
+import { Character } from "@/types/Characters";
 import Image from "next/image";
 import { useContext } from "react";
 import classes from "./FavoriteButton.module.css";

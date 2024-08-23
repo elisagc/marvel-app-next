@@ -1,4 +1,4 @@
-import { Comic } from "@/interfaces/Comics";
+import { Comic } from "@/types/Comics";
 import Image from "next/image";
 import classes from "./ComicCard.module.css";
 

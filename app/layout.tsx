@@ -2,7 +2,7 @@ import { Header } from "@/components";
 import { Providers } from "@/store/Providers";
 import type { Metadata } from "next";
 import { Roboto_Condensed } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
 
 const inter = Roboto_Condensed({ subsets: ["latin"] });
 

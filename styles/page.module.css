@@ -1,11 +1,17 @@
-.main-container {
+.main-container,
+.favorites-container {
   padding: var(--size-48);
 }
 
 @media (width <= 425px) {
-  .main-container {
+  .main-container,
+  .favorites-container {
     padding: var(--size-16);
   }
+}
+
+.favorites-container > :first-child {
+  padding-bottom: var(--size-24);
 }
 
 .error-container {

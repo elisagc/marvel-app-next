@@ -1,4 +1,4 @@
-import { Character } from "@/interfaces/Characters";
+import { Character } from "@/types/Characters";
 import { createContext, ReactNode, useCallback, useContext, useEffect, useReducer } from "react";
 
 type FavoritesMap = {

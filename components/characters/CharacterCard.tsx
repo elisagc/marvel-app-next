@@ -1,5 +1,5 @@
 import { FavoriteButton } from "@/components";
-import { Character } from "@/interfaces/Characters";
+import { Character } from "@/types/Characters";
 import Image from "next/image";
 import Link from "next/link";
 import classes from "./CharacterCard.module.css";

@@ -1,4 +1,4 @@
-import { Comic, ComicApiResponse } from "@/interfaces/Comics";
+import { Comic, ComicApiResponse } from "@/types/Comics";
 
 export const getCharacterComics = async (id: string): Promise<Comic[]> => {
   const url = `https://gateway.marvel.com/v1/public/characters/${id}/comics?orderBy=issueNumber&`;

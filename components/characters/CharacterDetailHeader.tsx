@@ -1,5 +1,5 @@
 import { FavoriteButton } from "@/components";
-import { Character } from "@/interfaces/Characters";
+import { Character } from "@/types/Characters";
 import Image from "next/image";
 import classes from "./CharacterDetailHeader.module.css";
 interface CharacterDetailHeaderProps {

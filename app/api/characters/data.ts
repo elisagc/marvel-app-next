@@ -1,4 +1,4 @@
-import { Character, CharacterResponse, CharactersApiResponse } from "@/interfaces/Characters";
+import { Character, CharacterResponse, CharactersApiResponse } from "@/types/Characters";
 
 export const getCharacters = async ({
   limit = 0,

@@ -1,5 +1,5 @@
-import { getCharacterDetail } from "@/api/characters/data";
-import { getCharacterComics } from "@/api/comics/data";
+import { getCharacterDetail } from "@/app/api/characters/data";
+import { getCharacterComics } from "@/app/api/comics/data";
 import { CharacterDetailHeader } from "@/components";
 import { ComicList } from "@/components/comic/ComicList";
 

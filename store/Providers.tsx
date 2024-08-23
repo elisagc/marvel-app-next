@@ -1,6 +1,6 @@
 "use client";
-import { FavoritesContext, FavoritesProvider } from "@/store/favoritesContext";
 import React, { useContext, useEffect } from "react";
+import { FavoritesContext, FavoritesProvider } from "./favoritesContext";
 
 interface ProvidersProps {
   children: React.ReactNode;

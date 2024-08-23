@@ -1,6 +1,6 @@
 "use client";
 
-import classes from "page.module.css";
+import classes from "@/styles/page.module.css";
 import { useEffect } from "react";
 
 export default function ErrorPage({

@@ -1,8 +1,6 @@
-import { CharacterList, Search } from "@/components";
-
+import { CharacterList, Loader, Search } from "@/components";
+import classes from "@/styles/page.module.css";
 import { Suspense } from "react";
-import { Loader } from "./components/common/Loader";
-import classes from "./page.module.css";
 
 interface Params {
   search?: string;

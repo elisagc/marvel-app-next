@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode, useRef, useState } from "react";
 import classes from "./Slider.module.css";
 

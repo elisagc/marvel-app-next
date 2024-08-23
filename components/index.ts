@@ -1,7 +1,9 @@
 export { CharacterCard } from "./characters/CharacterCard";
 export { CharacterDetailHeader } from "./characters/CharacterDetailHeader";
 export { CharacterList } from "./characters/CharacterList";
+export { ComicCard } from "./comic/ComicCard";
 export { Loader } from "./common/Loader";
+export { Slider } from "./common/Slider";
 export { Title } from "./common/Title";
 export { FavoriteButton } from "./favorites/FavoriteButton";
 export { FavoriteList } from "./favorites/FavoriteList";
