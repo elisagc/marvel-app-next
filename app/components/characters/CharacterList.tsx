@@ -1,17 +1,22 @@
-import { Character } from "@/interfaces/Characters";
+import { getCharacters } from "@/api/characters/data";
+import { SearchCounter } from "@/components";
 import { CharacterCard } from "./CharacterCard";
 import classes from "./CharacterList.module.css";
 
 interface CharacterListProps {
-  characters: Character[];
+  query?: string;
 }
 
-export const CharacterList = ({ characters }: CharacterListProps) => {
+export const CharacterList = async ({ query }: CharacterListProps) => {
+  const { characters, total } = await getCharacters({ limit: 50, offset: 0, search: query });
   return (
-    <div className={classes["character-list"]}>
-      {characters.map((character) => (
-        <CharacterCard key={character.id} character={character} />
-      ))}
+    <div>
+      <SearchCounter results={total} />
+      <div className={classes["character-list"]}>
+        {characters.map((character) => (
+          <CharacterCard key={character.id} character={character} />
+        ))}
+      </div>
     </div>
   );
 };

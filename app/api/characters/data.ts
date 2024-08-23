@@ -1,10 +1,21 @@
 import { Character, CharacterResponse, CharactersApiResponse } from "@/interfaces/Characters";
 
-export const getCharacters = async ({ limit = 0, offset = 0 }): Promise<CharacterResponse> => {
+export const getCharacters = async ({
+  limit = 0,
+  offset = 0,
+  search = undefined,
+}: {
+  limit?: number;
+  offset?: number;
+  search?: string;
+}): Promise<CharacterResponse> => {
   const url = `https://gateway.marvel.com/v1/public/characters?limit=${limit}&offset=${offset}`;
+  const searchQuery = search ? `&nameStartsWith=${search}` : "";
   const urlApiKeyParams = `&ts=${process.env.TIME_STAMP}&apikey=${process.env.MARVEL_API_KEY}&hash=${process.env.HASH_MD5}`;
-
-  const { data }: CharactersApiResponse = await fetch(`${url}${urlApiKeyParams}`).then((res) => res.json());
+  console.log(`${url}${urlApiKeyParams}`);
+  const { data }: CharactersApiResponse = await fetch(`${url}${urlApiKeyParams}${searchQuery}`).then((res) =>
+    res.json()
+  );
 
   if (data?.results) {
     const characters: Character[] = data.results?.map((character) => ({

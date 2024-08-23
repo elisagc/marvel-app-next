@@ -1,16 +1,25 @@
-import { CharacterList, Search, SearchCounter } from "@/components";
+import { CharacterList, Search } from "@/components";
 
-import { getCharacters } from "@/api/characters/data";
+import { Suspense } from "react";
+import { Loader } from "./components/common/Loader";
 import classes from "./page.module.css";
 
-export default async function Home() {
-  const { characters, total } = await getCharacters({ limit: 10, offset: 0 });
+interface Params {
+  search?: string;
+}
+interface SearchParams {
+  searchParams: Params;
+}
+
+export default function Home({ searchParams }: SearchParams) {
+  const { search } = searchParams;
 
   return (
     <main className={classes["main-container"]}>
       <Search placeholder="Search a character..." />
-      <SearchCounter results={total} />
-      <CharacterList characters={characters} />
+      <Suspense key={search ?? Math.random()} fallback={<Loader />}>
+        <CharacterList query={search} />
+      </Suspense>
     </main>
   );
 }

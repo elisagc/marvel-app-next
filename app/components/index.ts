@@ -1,8 +1,10 @@
+export { CharacterCard } from "./characters/CharacterCard";
 export { CharacterDetailHeader } from "./characters/CharacterDetailHeader";
 export { CharacterList } from "./characters/CharacterList";
+export { Loader } from "./common/Loader";
 export { Title } from "./common/Title";
 export { FavoriteButton } from "./favorites/FavoriteButton";
-export { FavoriteCharacters } from "./favorites/FavoriteCharacters";
+export { FavoriteList } from "./favorites/FavoriteList";
 export { FavoritesCounter } from "./favorites/FavoritesCounter";
 export { Header } from "./header/Header";
 export { Search } from "./search/Search";

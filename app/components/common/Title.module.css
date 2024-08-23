@@ -1,7 +1,5 @@
 .title {
   font-size: var(--size-32);
   font-weight: bold;
-  margin-bottom: 1rem;
   text-transform: uppercase;
-  margin-bottom: var(--size-36);
 }
