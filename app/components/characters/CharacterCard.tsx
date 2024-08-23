@@ -10,8 +10,8 @@ interface CharacterCardProps {
 
 export const CharacterCard = ({ character }: CharacterCardProps) => {
   return (
-    <Link href={`/character/${character.id}`}>
-      <div key={character.id} className={classes["character-card"]}>
+    <div key={character.id} className={classes["character-card"]}>
+      <Link href={`/character/${character.id}`}>
         <div className={classes["character-card-image-container"]}>
           <Image
             src={character.image}
@@ -20,11 +20,11 @@ export const CharacterCard = ({ character }: CharacterCardProps) => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
-        <div className={classes["character-card-footer"]}>
-          <span>{character.name}</span>
-          <FavoriteButton character={character} />
-        </div>
+      </Link>
+      <div className={classes["character-card-footer"]}>
+        <span>{character.name}</span>
+        <FavoriteButton character={character} />
       </div>
-    </Link>
+    </div>
   );
 };
