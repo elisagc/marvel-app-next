@@ -20,7 +20,7 @@ export const FavoriteButton = ({ character, size = "small" }: FavoriteButtonProp
     toggleFavorite(character);
   };
 
-  const isFavorite = !!favorites[id];
+  const isFavorite = !!(favorites && favorites[id]);
 
   const buttonSize = {
     small: 12,

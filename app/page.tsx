@@ -10,13 +10,11 @@ interface SearchParams {
 }
 
 export default function Home({ searchParams }: SearchParams) {
-  const { search } = searchParams;
-
   return (
     <main className={classes["main-container"]}>
       <Search placeholder="Search a character..." />
-      <Suspense key={search} fallback={<Loader />}>
-        <CharacterList query={search} />
+      <Suspense key={searchParams?.search} fallback={<Loader />}>
+        <CharacterList query={searchParams.search} />
       </Suspense>
     </main>
   );

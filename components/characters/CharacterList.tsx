@@ -7,7 +7,7 @@ interface CharacterListProps {
   query?: string;
 }
 
-export const CharacterList = async ({ query }: CharacterListProps) => {
+export const CharacterList = async ({ query = undefined }: CharacterListProps) => {
   const { characters, total } = await getCharacters({ limit: 50, offset: 0, search: query });
   return (
     <div>
