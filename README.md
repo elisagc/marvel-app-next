@@ -71,7 +71,7 @@ npm run dev
 yarn dev
 ```
 
-## Estructura de proyecto
+## Estructura del proyecto
 
 ```
 marvel-app-next/
