@@ -1,4 +1,4 @@
-import { getCharacters } from "@/app/api/characters/data";
+import { getPokemons } from "@/app/api/characters/data";
 import { SearchCounter } from "@/components";
 import { CharacterCard } from "./CharacterCard";
 import classes from "./CharacterList.module.css";
@@ -10,8 +10,8 @@ interface CharacterListProps {
 export const CharacterList = async ({
   query = undefined,
 }: CharacterListProps) => {
-  const { characters, total } = await getCharacters({
-    limit: 5,
+  const { characters, total } = await getPokemons({
+    limit: 50,
     offset: 0,
     search: query,
   });
