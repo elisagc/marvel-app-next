@@ -2,7 +2,7 @@
 
 import { CharacterCard, SearchCounter } from "@/components";
 import classes from "@/components/characters/CharacterList.module.css";
-import { FavoritesContext } from "@/store/favoritesContext";
+import { FavoritesContext } from "@/context/favoritesContext";
 import { useContext } from "react";
 
 export const FavoriteList = () => {

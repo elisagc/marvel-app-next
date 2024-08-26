@@ -1,6 +1,6 @@
 "use client";
 
-import { FavoritesContext } from "@/store/favoritesContext";
+import { FavoritesContext } from "@/context/favoritesContext";
 import { Character } from "@/types/Characters";
 import Image from "next/image";
 import { useContext } from "react";

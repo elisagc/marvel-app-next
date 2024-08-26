@@ -1,8 +1,8 @@
 import { Header } from "@/components";
-import { Providers } from "@/store/Providers";
+import { Providers } from "@/context/Providers";
+import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Roboto_Condensed } from "next/font/google";
-import "../styles/globals.css";
 
 const inter = Roboto_Condensed({ subsets: ["latin"] });
 
