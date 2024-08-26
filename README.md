@@ -51,7 +51,7 @@ La API de Marvel puede experimentar tiempos de respuesta lentos para las solicit
    HASH_MD5=tu_hash_MD5 (crear con las claves de la API)
    ```
 
-4. Generar el hash MD5 - [Enlace a generador de MD5](www.md5hashgenerator.com)
+4. Generar el hash MD5 - [Enlace a generador de MD5](https://www.md5hashgenerator.com)
 
    ```bash
    Si tus claves son:
