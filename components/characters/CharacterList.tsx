@@ -11,7 +11,7 @@ export const CharacterList = async ({
   query = undefined,
 }: CharacterListProps) => {
   const { characters, total } = await getCharacters({
-    limit: 50,
+    limit: 5,
     offset: 0,
     search: query,
   });
