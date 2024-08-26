@@ -16,7 +16,7 @@ export default function ErrorPage({
 
   return (
     <div className={classes["error-container"]}>
-      <h2>Something went wrong! {JSON.stringify(error)}</h2>
+      <h2>Something went wrong! {error.message}</h2>
       <button onClick={() => reset()}>Try again</button>
     </div>
   );
