@@ -1,4 +1,4 @@
-import { getCharacters, getPokemons } from "@/app/api/characters/data";
+import { getCharacters } from "@/app/api/characters/data";
 import { SearchCounter } from "@/components";
 import { CharacterCard } from "./CharacterCard";
 import classes from "./CharacterList.module.css";
