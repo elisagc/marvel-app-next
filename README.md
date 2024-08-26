@@ -12,9 +12,8 @@ Una aplicación desarrollada con Next.js para explorar el universo Marvel.
 - [Nota importante](#nota-importante)
 - [Requisitos Previos](#requisitos-previos)
 - [Instalación](#instalación)
-- [Estructura del proyecto](#ejecución)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Autor](#autor)
+- [Estructura del proyecto](#estructura-del-proyecto)
+- [Autor](#autores)
 
 ## Descripción
 
@@ -89,6 +88,6 @@ marvel-app-next/
 └── tests/               # Pruebas unitarias y de integración
 ```
 
-## Authors
+## Autores
 
 - [@elisagc](https://github.com/elisagc)
