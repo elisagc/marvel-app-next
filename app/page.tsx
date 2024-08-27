@@ -9,7 +9,7 @@ interface SearchParams {
   searchParams: Params;
 }
 
-export default function Home({ searchParams }: SearchParams) {
+export default async function Home({ searchParams }: SearchParams) {
   return (
     <main className={classes["main-container"]}>
       <Search placeholder="Search a character..." />
