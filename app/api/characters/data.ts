@@ -1,9 +1,5 @@
-import {
-  Character,
-  CharacterResponse,
-  CharactersApiResponse,
-} from "@/types/Characters";
-import { PokemonsReponse, SimplePokemon } from "@/types/Pokemon";
+import { Character, CharacterResponse, CharactersApiResponse } from "@/types/Characters";
+import { PokemonsReponse } from "@/types/Pokemon";
 import { notFound } from "next/navigation";
 
 export const getCharacters = async ({
@@ -20,9 +16,9 @@ export const getCharacters = async ({
     const searchQuery = search ? `&nameStartsWith=${search}` : "";
     const urlApiKeyParams = `&ts=${process.env.TIME_STAMP}&apikey=${process.env.MARVEL_API_KEY}&hash=${process.env.HASH_MD5}`;
 
-    const { data }: CharactersApiResponse = await fetch(
-      `${url}${urlApiKeyParams}${searchQuery}`
-    ).then((res) => res.json());
+    const { data }: CharactersApiResponse = await fetch(`${url}${urlApiKeyParams}${searchQuery}`).then((res) =>
+      res.json()
+    );
 
     if (data?.results) {
       const characters: Character[] = data.results?.map((character) => ({
@@ -44,17 +40,11 @@ export const getCharacters = async ({
   }
 };
 
-export const getCharacterDetail = async ({
-  id,
-}: {
-  id: string;
-}): Promise<Character> => {
+export const getCharacterDetail = async ({ id }: { id: string }): Promise<Character> => {
   try {
     const url = `https://gateway.marvel.com/v1/public/characters/${id}`;
     const urlApiKeyParams = `?ts=${process.env.TIME_STAMP}&apikey=${process.env.MARVEL_API_KEY}&hash=${process.env.HASH_MD5}`;
-    const { data }: CharactersApiResponse = await fetch(
-      `${url}${urlApiKeyParams}`
-    ).then((res) => res.json());
+    const { data }: CharactersApiResponse = await fetch(`${url}${urlApiKeyParams}`).then((res) => res.json());
     if (data && data.results) {
       const character: Character = {
         id: data.results[0].id,
@@ -72,6 +62,7 @@ export const getCharacterDetail = async ({
   }
 };
 
+// Create to test in vercel with pokemon api (marvel api too slow and break in vercel)
 export const getPokemons = async ({
   limit = 0,
   offset = 0,
@@ -81,16 +72,9 @@ export const getPokemons = async ({
   offset?: number;
   search?: string;
 }): Promise<CharacterResponse> => {
-  console.log(
-    `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}&${
-      search ? `${search}` : ""
-    }`
+  const data: PokemonsReponse = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}}`).then(
+    (res) => res.json()
   );
-  const data: PokemonsReponse = await fetch(
-    `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}&${
-      search ? `${search}` : ""
-    }`
-  ).then((res) => res.json());
 
   const pokemons = data.results.map((pokemon) => ({
     id: Number(pokemon.url.split("/").at(-2)!),
