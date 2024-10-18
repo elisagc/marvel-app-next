@@ -9,7 +9,7 @@ Una aplicación desarrollada con Next.js para explorar el universo Marvel.
 ## Tabla de Contenidos
 
 - [Descripción](#descripción)
-- [Nota importante](#nota-importante)
+- [Demo](#demo)
 - [Requisitos Previos](#requisitos-previos)
 - [Instalación](#instalación)
 - [Estructura del proyecto](#estructura-del-proyecto)
@@ -18,6 +18,10 @@ Una aplicación desarrollada con Next.js para explorar el universo Marvel.
 ## Descripción
 
 Marvel App Next es una aplicación web construida con Next.js que permite a los usuarios explorar y descubrir personajes del universo Marvel, consultar los cómics en los que aparecen y gestionar una lista personalizada de personajes favoritos.
+
+## Demo
+
+https://marvel-app-next-omega.vercel.app/
 
 ### Nota importante sobre la lentitud de la API de Marvel
 
